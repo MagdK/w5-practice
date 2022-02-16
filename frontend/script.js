@@ -264,21 +264,101 @@ console.log(myObject === myThirdObject);
 })
  */
 
-function loadEvent() {
-    console.log("Gyere haza Mikkamakka");
+
+
+// Eredeti kod, mielott Szilvit kovettuk
+
+/* function loadEvent() {
     for (const movie of movies) {
         document.getElementById("root").insertAdjacentHTML("beforeend", `
         <div class="card">
-            <span class="title">${movie.title}</span> 
-            <span class="year">${movie.year}</span>
-            <span class="rate">${movie.rate}</span>
+            <h2>${movie.title}</h2> 
+            <time>${movie.year}</time>
+            <div class="rate">${movie.rate}</div>
         </div>
         `)
     }
 }
 // const-ban a kulcsok ertekeit at tudom irni, uj kulcsokat tudok hozza adni
-window.addEventListener("load", loadEvent)
+window.addEventListener("load", loadEvent) */
 
 
-/* Fealadat szunetre: ezt a kodot bovitsuk ki ugy hogy keruljon bele html-be css-elve az ev es az ertekeles a div kartyan belul egy egy html elembe, harom oszlopos flex formazas. Title, year, rate
+/* Fealadat szunetre: ezt a kodot bovitsuk ki ugy, hogy keruljon bele html-be css-elve az ev es az ertekeles a div kartyan belul egy egy html elembe, harom oszlopos flex formazas. Title, year, rate
 span-be akar a rate-et. Root id-ju divbe harom oszlop es flexszel oldjuk meg */
+
+
+/* function loadEvent() {
+    let rootElement = document.getElementById("root")
+
+     let card = function(movieReceived){
+        return `
+        <div class="card">
+            <h2>${movieReceived.title}</h2> 
+            <time>${movieReceived.year}</time>
+            <div class="rate">${movieReceived.rate}</div>
+        </div>
+        `;
+    }; */
+ 
+/*     rootElement.insertAdjacentHTML("beforeend", card({
+        "title": "The Goldrush",
+        "year": 1925,
+        "rate": 9.9
+    }));
+
+
+    let actuallyFavMovie = {
+        "title": "Random title",
+        "year": 2002,
+        "rate": 8.9
+    }
+
+    rootElement.insertAdjacentHTML("beforeend", card(actuallyFavMovie));
+    rootElement.insertAdjacentHTML("beforeend", card(movies[0]));
+
+
+    for (const movieSend of movies) {
+        rootElement.insertAdjacentHTML("beforeend", card(movieSend));
+    }
+    console.log(movies);
+}
+// const-ban a kulcsok ertekeit at tudom irni, uj kulcsokat tudok hozza adni
+window.addEventListener("load", loadEvent)
+ */
+/* Fontos, hogy a javascript az valtozokat deklaralja (hoisting), a fuggvenyeket teljes egeszeben elerhetove teszi a nulladik sorban. Ha fuggvenykent hoznank letre, a folotte levo sorokban is tudnank hasznalni. Hasznosabb, ha valtozoba mentjuk el a fuggvenyeinket debuggolas, fenntarthatosag szempontjabol. 
+Szebb kodot tudunk irni ugy, ha a fuggvenyek ugyanugy viselkednek, mint minden mas, amit valtozoba mentunk.  
+Igy lehet tisztabb kodot irni. */
+
+
+
+function loadEvent() {
+    console.log("load2")
+
+    let rootElement = document.getElementById("root")
+
+    let card2 = function (title, year, rate){
+        return `
+        <div class="card">
+            <h2>${title}</h2>
+            <div class="time">${year}</div>
+            <div class="rate">${rate}</div>
+        </div>
+        `;
+    }
+
+    let anotherFavouriteMovie = {
+        title: "The last scout boy",
+        year: 1991,
+        rate: 7
+    }
+
+    rootElement.insertAdjacentHTML("beforeend", card2(anotherFavouriteMovie.title, anotherFavouriteMovie.year, anotherFavouriteMovie.rate));
+
+    for (const movieSend of movies) { 
+        
+        rootElement.insertAdjacentHTML("beforeend", card2(movieSend.title, movieSend.year, movieSend.rate));
+    }
+
+    console.log(movies);
+}
+window.addEventListener("load", loadEvent);
