@@ -166,7 +166,8 @@ console.log(num) // => num is not defined */
 
 // METODUSOK - METHODS 
 // objektumon belul el tudok menteni kulcs ertek parokat, azon belul primitiveket, objektumot, tombot
-// fuggvenyt is el tudunk menteni, ezt pedig ugy hivjuk h metodus
+
+// fuggvenyt is el tudunk menteni az objektumba, ezt pedig ugy hivjuk h metodus
 
 /* let g = {
     // nem kell nevet adni a fuggvenynek, mert myMethod a neve
@@ -187,15 +188,97 @@ g.myMethod()
 
 window.addEventListener("load", loadEvent) */
 
-let h = {
-    anotherMethod: function (text){
-        return `You sent the following argument to this method: ${text}`
-    }
+// /* let h = {/*  */
+//     anotherMethod: function (text){
+//         return `You sent the following argument to this method: ${text}`
+//     }
+// }
+
+// // ha el akarjuk menteni az erteket akkor ezt kell kiirni
+// let i = h.anotherMethod("itt kuldjuk be az argument-et")
+// console.log(i);
+
+// //ha az eredmenyt szeretnenk ki consol.log-ozni
+// console.log(h.anotherMethod("another argument"));
+
+
+// 2022 02 16
+
+/* let myString = "Mikkamakka";
+
+let mySecondString = myString;
+let myThirdString = "Mikkamakka";
+
+console.log(mySecondString);
+console.log(myString);
+console.log(myString === mySecondString);
+console.log(myString === myThirdString);
+ */
+
+// Fuggvenyek is ugyanolyan erteku dolgok, first class citizenek. A lenyeg az, hogy ha barmit teszunk a myString sorba, es egyenlove tesszuk oket, akkor ez az osszehasonlitas igaz lesz. 
+
+
+
+
+// Objektumok eseteben mi a helyzet
+
+/* let myObject = {
+    myString: "Mikkamakka"
 }
 
-// ha el akarjuk menteni az erteket akkor ezt kell kiirni
-let i = h.anotherMethod("itt kuldjuk be az argument-et")
-console.log(i);
+let mySecondObject = myObject;
 
-//ha az eredmenyt szeretnenk ki consol.log-ozni
-console.log(h.anotherMethod("another argument"));
+let myThirdObject = {
+    myString: "Mikkamakka"
+}
+// ha a tartalmat felulirjuk az objektumnak ,de egyenlove van teve egy masikkal, akkor visszafele is felulirja. 
+mySecondObject.myString = "Dömdödöm";
+
+// Másolás
+let myFourthObject = {...myObject};
+
+myFourthObject.myString = "Vacskamati";
+
+console.log(myObject.myString);
+console.log(myFourthObject.myString);
+ */
+
+/* console.log(myObject === mySecondObject);
+console.log(myObject === myThirdObject);
+ */
+
+// Primitivek es objektumok elteroen viselkednek osszehasonlitasnal. Mert memoria szinten alapvetoen mashol tarolodnak el.
+
+
+
+
+// console.log("" === ""); // => true
+// console.log({} === {}); // => false
+/*  miert lett false a masodik? Amint letrehozunk egy objektumot, egybol egy uj objektumot hozunk letre. Hiaba van benne ugyanaz a kulcsnev, ertek, az objektum az ujra letrejott, teljesen kulon az elozotol. Ha egyenlove akarjuk tenni a ket objektumot, akkor hozza kell rendelni. let myObj = yourObj
+ */
+
+
+// Leegyszerusitett verzio, ha nem hasznaljuk ujra a fuggvenyt
+/* window.addEventListener("load", function() {
+    console.log("Negyszogletu kerekerdo");
+})
+ */
+
+function loadEvent() {
+    console.log("Gyere haza Mikkamakka");
+    for (const movie of movies) {
+        document.getElementById("root").insertAdjacentHTML("beforeend", `
+        <div class="card">
+        <span class="title">${movie.title}</span> 
+        <span class="year">${movie.year}</span>
+        <span class="rate">${movie.rate}</span>
+        </div>
+        `)
+    }
+}
+// const-ban a kulcsok ertekeit at tudom irni, uj kulcsokat tudok hozza adni
+window.addEventListener("load", loadEvent)
+
+
+/* Fealadat szunetre: ezt a kodot bovitsuk ki ugy hogy keruljon bele html-be css-elve az ev es az ertekeles a div kartyan belul egy egy html elembe, harom oszlopos flex formazas. Title, year, rate
+span-be akar a rate-et. Root id-ju divbe harom oszlop es flexszel oldjuk meg */
