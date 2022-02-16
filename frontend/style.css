@@ -35,8 +35,19 @@ select {
 
 /* RESET OVER */
 
+
+.card {
+	display: flex;
+	justify-content: center;
+	width: 1000px;
+	margin: 0 30px 60px 30px;
+}
+
 .title, 
 .year,
 .rate {
-
+	display: flex;
+	flex-direction: column;
+	margin: 30px;
+	width: 33%;
 }

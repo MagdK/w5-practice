@@ -269,9 +269,9 @@ function loadEvent() {
     for (const movie of movies) {
         document.getElementById("root").insertAdjacentHTML("beforeend", `
         <div class="card">
-        <span class="title">${movie.title}</span> 
-        <span class="year">${movie.year}</span>
-        <span class="rate">${movie.rate}</span>
+            <span class="title">${movie.title}</span> 
+            <span class="year">${movie.year}</span>
+            <span class="rate">${movie.rate}</span>
         </div>
         `)
     }
