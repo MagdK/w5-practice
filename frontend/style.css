@@ -70,7 +70,8 @@ select {
 	flex-basis: 25%; /* kinyujtja */
 	height: 100px;
 	padding: 15px;
-	background-color: #d0d0d0;
+	background-color: #e2ecff;
+	border-radius: 4px;
 }
 
 /* .title, 
