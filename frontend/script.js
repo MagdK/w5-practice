@@ -250,7 +250,7 @@ console.log(mySecondString);
 console.log(myString);
 console.log(myString === mySecondString);
 console.log(myString === myThirdString);
- */
+*/
 
     // Fuggvenyek is ugyanolyan erteku dolgok, first class citizenek. A lenyeg az, hogy ha barmit teszunk a myString sorba, es egyenlove tesszuk oket, akkor ez az osszehasonlitas igaz lesz. 
 
@@ -290,7 +290,7 @@ console.log(myObject === myThirdObject);
 // console.log("" === ""); // => true - ha ures stringet hasonlitok ossze
 // console.log({} === {}); // => false - ha ures objectet hasonlitok ossze
 
-    /*  miert lett false a masodik? Amint letrehozunk egy objektumot, egybol egy uj objektumot hozunk letre. Hiaba van benne ugyanaz a kulcsnev, ertek, az objektum az ujra letrejott, teljesen kulon az elozotol. Ha egyenlove akarjuk tenni a ket objektumot, akkor hozza kell rendelni. let myObj = yourObj
+    /*  miert lett false a masodik? Amint letrehozunk egy objektumot, egybol egy uj objektumot hozunk letre. Hiaba van benne ugyanaz a kulcs, ertek, az objektum az ujra letrejott, teljesen kulon az elozotol. Ha egyenlove akarjuk tenni a ket objektumot, akkor hozza kell rendelni. let myObj = yourObj
  */
 
 
