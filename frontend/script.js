@@ -28,7 +28,7 @@
 
 
 
-// Mit tudunk epiteni ezekbol a stringekbol? Adatstrukturakat tudunk letrehozni, objektumokat krealok. Pl  akonyv cimet hozzarendelem a cimehez. 
+// Mit tudunk epiteni ezekbol a stringekbol? Adatstrukturakat tudunk letrehozni, objektumokat krealok. Pl a konyvcimet hozzarendelem a cimehez. 
 
 
 // Object es Array - hasonlosag es kulonbseg
@@ -45,7 +45,7 @@
     // console.log({
     //     title: "Start coding", 
     //     // title nem feltetlenul kell idezojelbe irni
-    //     //ha .json fileba kerul ,akkor kell idezojelbe rakni
+    //     //ha .json fileba kerul, csak akkor kell idezojel
     //     // kulonbseg a ketto kozott, a json fajl korlatozza csak adatra, amit oda beteszunk. Ezzel szemben a javascriptten belul sokkal tobb mindent meg tudunk tenni. 
     //     "type": "solo",
     //     "difficulty": 4.1,
@@ -88,7 +88,7 @@
     // console.log(c)
 
     // // ket nagyon fontos dolog van a valtozokkal kapcsolatban: 
-    // // 1. Valtozok nem ugy mukodnek, mint ahogy nalunk latszanak - nem fentrol lefele olvassa  ajvascript a kodunkat - !!!!! hoisting !!!!! - ket lepcsofok van - 1. DECLARE 2. INITIALISE  - a var eseteben ez egyszeru - var valamilyen scope-ban letrejon, amikor letrejon a var, akkor az osszes varunkat kiszedi es legfentebbre rendezi kepletesen a -1-edik sorba. felrendezi a var-t es deklaralja is. A 0-adik sorunkban a var eseteben felviszi, azt mondja, hogy var a, es meg erteket is ad neki a var. Tehat ha a 0-adik sorban console log-ozunk, letrehozza a valtozot es nem csak deklaralja, hanem inicializalja UNDEFINE-dal. Azert ferunk hozza, a sajat scope-ja fole rendezi. 0.sor var a = undefined
+    // // 1. Valtozok nem ugy mukodnek, mint ahogy nalunk latszanak - nem fentrol lefele olvassa a javascript a kodunkat - !!!!! HOISTING !!!!! - ket lepcsofok van - 1. DECLARE 2. INITIALISE  - a var eseteben ez egyszeru - var valamilyen scope-ban letrejon, amikor letrejon a var, akkor az osszes varunkat kiszedi es legfentebbre rendezi kepletesen a -1-edik sorba. felrendezi a var-t es deklaralja is. A 0-adik sorunkban a var eseteben felviszi, azt mondja, hogy var a, es meg erteket is ad neki a var. Tehat ha a 0-adik sorban console log-ozunk, letrehozza a valtozot es nem csak deklaralja, hanem inicializalja UNDEFINE-dal. Azert ferunk hozza, a sajat scope-ja fole rendezi. 0.sor var a = undefined
 
 
     // // let b - ha console.log-ozzuk azelot, mielott - deklaralja, de hibauzit kuld: ReferenceError: Cannot access 'b' before initialization Var szocskahoz hozza lehet ferni inicializalas elott. A let-hez viszont nem. 
@@ -118,7 +118,7 @@
 
 // GLOBAL SCOPE 
 // BLOCK SCOPE - let const
-// Function scope
+// FUNCTION scope
 
 // let const - globalThis, functional es block scope-ja is van, var az mas
 
