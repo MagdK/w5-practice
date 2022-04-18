@@ -25,7 +25,7 @@
 }
 window.addEventListener("load", loadEvent);
  */
-/* if else a ler cards ala: Ha egy fuggveny, ami return-ol valamit, ha a feltetel nem teljesul akkor undefined modon kerul vissza az az adat ami a szuron kivul esik year > 2000 ==> undefinied jon vissza
+/* if else a let cards ala: Ha egy fuggveny, ami return-ol valamit, ha a feltetel nem teljesul akkor undefined modon kerul vissza az az adat ami a szuron kivul esik year > 2000 ==> undefinied jon vissza
 
 Memoriakezelesben valo gondolkodas, ures dolgot is kell return- olni, feleselegesen turaztatjuk a kodunkat. 
 
@@ -137,7 +137,7 @@ function loadEvent() {
             newGoodMovies.push(movieSend);
         }
     }
-
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort 
     newGoodMovies.sort(function(a, b){return a.year - b.year})
 
     // renderAllCardElementhez bekuldunk egy tombot
